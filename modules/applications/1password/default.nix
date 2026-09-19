@@ -1,9 +1,9 @@
-{ config, pkgs, nixosRepo, ... }:
+{ config, pkgs, ... }:
 
 {
   home.packages = [
     pkgs._1password-gui
   ];
 
-  #xdg.configFile."ssh".cours = config.lib.file.mkOutOfStoreSymlink 
+  home.file.".ssh/config".source = ./ssh-config;
 }
