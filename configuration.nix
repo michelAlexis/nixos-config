@@ -100,7 +100,7 @@
     btop
     alacritty
     yazi
-    _1password-gui
+    # _1password-gui
   ];
 
   fonts.packages = with pkgs; [

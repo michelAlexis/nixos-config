@@ -1,7 +1,3 @@
-
-
-
-
 {
   description = "Nixos the begining";
   inputs = {

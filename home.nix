@@ -1,7 +1,3 @@
-
-
-
-
 { config, pkgs, ... }:
 
 {
@@ -11,10 +7,7 @@
   home.username = "ami";
   home.homeDirectory = "/home/ami";
 
-  programs.bash = {
-    enable = true;
-    shellAliases = {
-      btw = "echo I use nixos btw";
-    };
-  };
+  imports = [
+    ./modules/applications/1password
+  ];
 }
