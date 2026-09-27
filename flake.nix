@@ -6,6 +6,10 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    quickshell = {
+      url = "github:quickshell-mirror/quickshell?ref=v0.3.1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = { self, nixpkgs, home-manager, ... } @inputs : {
     nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
