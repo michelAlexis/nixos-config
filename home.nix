@@ -15,6 +15,7 @@ in
   imports = [
     ./modules/core
     ./modules/core/quickshell
+    ./modules/core/hyprland
 
     ./modules/applications/1password
     ./modules/dev/nvim

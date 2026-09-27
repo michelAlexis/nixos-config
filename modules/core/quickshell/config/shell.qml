@@ -1,19 +1,14 @@
-import Quickshell // for PanelWindow
-import QtQuick // for Text
+import Quickshell
+import "Bar"
 
-PanelWindow {
-  anchors {
-    top: true
-    left: true
-    right: true
-  }
+Scope {
+    Variants {
+        model: Quickshell.screens
 
-  implicitHeight: 30
+        delegate: Bar {
+            required property var modelData
 
-  Text {
-    // center the bar in its parent component (the window)
-    anchors.centerIn: parent
-
-    text: "hello world"
-  }
+            screen: modelData
+        }
+    }
 }
