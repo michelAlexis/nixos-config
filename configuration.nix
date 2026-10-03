@@ -51,6 +51,11 @@
   # };
   services.displayManager.ly.enable = true;
   services.upower.enable = true;
+
+  # environment.pathsToLink = [
+  #   "/share/applications"
+  #   "/share/xdg-desktop-portal"
+  # ];
   
 
   # Configure keymap in X11
