@@ -15,11 +15,12 @@ in
   imports = [
     ./modules/core
     # ./modules/core/quickshell
-    # ./modules/core/hyprland
-    ./module/core/noctalia
+    ./modules/core/hyprland
+    #./modules/core/noctalia
 
     ./modules/applications/1password
 
+    ./modules/dev
     ./modules/dev/nvim
   ];
 }

@@ -17,7 +17,7 @@
   networking.hostName = "nixos-btw"; # Define your hostname.
 
   # Configure network connections interactively with nmcli or nmtui.
-  networking.networkmanager.enable = true;
+  # networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Brussels";
@@ -40,22 +40,18 @@
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
-  # services.greetd = {
-  #   enable = true;
-  #   settings = {
-  #     default_session = {
-  #        command = "${pkgs.hyprland}/bin/Hyprland";
-  #        user = "ami";
-  #     };
-  #   };
-  # };
   services.displayManager.ly.enable = true;
+  
+  # Added for noctalia, maybe move those elsewhere
+  networking.networkmanager.enable = true;
+  hardware.bluetooth.enable = true;
   services.upower.enable = true;
+  services.tuned.enable = true;
 
-  # environment.pathsToLink = [
-  #   "/share/applications"
-  #   "/share/xdg-desktop-portal"
-  # ];
+  environment.pathsToLink = [
+    "/share/applications"
+    "/share/xdg-desktop-portal"
+  ];
   
 
   # Configure keymap in X11
