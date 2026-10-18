@@ -56,9 +56,10 @@ local gtk4_theme = "gsettings set org.gnome.desktop.interface 'prefer-dark'"
 local gtk3_theme = "gsettings set org.gnome.desktop.interface 'adw-gtk3'"
 
 hl.on("hyprland.start", function () 
-  hl.exec_cmd(terminal)
   hl.exec_cmd(gtk4_theme)
   hl.exec_cmd(gtk3_theme)
+  hl.exec_cmd(terminal)
+  hl.exec_cmd("qs")
   -- hl.exec_cmd("nm-applet")
   -- hl.exec_cmd("waybar & hyprpaper & firefox")
 end)

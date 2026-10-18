@@ -1,10 +1,9 @@
-{ config, pkgs, nixosRepo, ... }:
+{ pkgs, inputs, ... }:
 
 {
   home.packages = [
     pkgs.lazygit
     pkgs.lazydocker
+    inputs.herdr-nix.packages.${pkgs.system}.default
   ];
-
-  # xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${nixosRepo}/modules/dev/nvim/config";
 }

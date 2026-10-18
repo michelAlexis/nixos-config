@@ -22,7 +22,7 @@ Item {
             anchors.centerIn: parent
 
             text: battery.ready
-                ? "󰁹 " + Math.round(battery.percentage) + "%"
+                ? "󰁹 " + Math.round(battery.percentage * 100) + "%"
                 : "󰁹 --"
 
             color: Theme.foreground
@@ -68,7 +68,7 @@ Item {
 
                 Text {
                     text: battery.ready
-                        ? Math.round(battery.percentage) + "%"
+                        ? Math.round(battery.percentage * 100) + "%"
                         : "Unknown"
 
                     color: Theme.foreground

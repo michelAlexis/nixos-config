@@ -14,13 +14,15 @@ in
 
   imports = [
     ./modules/core
-    # ./modules/core/quickshell
     ./modules/core/hyprland
+    ./modules/core/quickshell
     #./modules/core/noctalia
 
     ./modules/applications/1password
 
     ./modules/dev
     ./modules/dev/nvim
+    ./modules/dev/alacritty
+    ./modules/dev/opencode
   ];
 }

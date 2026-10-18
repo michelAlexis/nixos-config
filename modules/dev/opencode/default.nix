@@ -5,5 +5,5 @@
     pkgs.opencode
   ];
 
-  # xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${nixosRepo}/modules/dev/nvim/config";
+  xdg.configFile."opencode".source = config.lib.file.mkOutOfStoreSymlink "${nixosRepo}/modules/dev/opencode/config";
 }

@@ -97,7 +97,6 @@
     vim 
     wget
     btop
-    alacritty
     yazi
     # _1password-gui
   ];

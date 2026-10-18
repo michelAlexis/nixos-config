@@ -28,12 +28,12 @@ Item {
 
             text: {
                 if (!root.sink?.audio)
-                    return "󰖁 --"
+                    return "󰖁  --"
 
                 if (root.sink.audio.muted)
-                    return "󰖁 Mute"
+                    return "󰖁  Mute"
 
-                return "󰕾 " + Math.round(root.sink.audio.volume * 100) + "%"
+                return "󰕾  " + Math.round(root.sink.audio.volume * 100) + "%"
             }
 
             color: Theme.foreground

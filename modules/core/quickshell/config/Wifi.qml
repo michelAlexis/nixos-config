@@ -41,8 +41,8 @@ Item {
             anchors.centerIn: parent
 
             text: root.connectedNetwork
-                ? "󰤨 " + root.connectedNetwork.name
-                : "󰤭 Offline"
+                ? "󰤨  " + root.connectedNetwork.name
+                : "󰤭  Offline"
 
             color: Theme.foreground
             font.pixelSize: 13
