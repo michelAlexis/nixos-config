@@ -5,7 +5,7 @@
     pkgs.neovim
     pkgs.tree-sitter
     pkgs.fzf
-    pkgs.stylua
+    # pkgs.stylua
   ];
 
   xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${nixosRepo}/modules/dev/nvim/config";
