@@ -24,5 +24,6 @@ in
     ./modules/dev/nvim
     ./modules/dev/alacritty
     ./modules/dev/opencode
+    ./modules/dev/herdr
   ];
 }
