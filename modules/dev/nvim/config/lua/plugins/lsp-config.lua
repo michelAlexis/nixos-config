@@ -24,6 +24,7 @@ local servers = {
   angularls = {},
   biome = {},
   tailwindcss = {},
+  qmlls = {}, -- for quickshell
 }
 
 -- [[ Configure LSP ]]

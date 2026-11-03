@@ -37,7 +37,7 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal    = "alacritty"
-local fileManager = "yazi"
+local fileManager = "alacritty -e yazi"
 local menu        = "hyprlauncher"
 local browser     = "firefox"
 
@@ -59,9 +59,10 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd(gtk4_theme)
   hl.exec_cmd(gtk3_theme)
   hl.exec_cmd(terminal)
-  hl.exec_cmd("qs")
+  hl.exec_cmd("quickshell")
+  hl.exec_cmd("vicinae server")
+  hl.exec_cmd("hyprpaper")
   -- hl.exec_cmd("nm-applet")
-  -- hl.exec_cmd("waybar & hyprpaper & firefox")
 end)
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 
@@ -108,8 +109,10 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
-            inactive_border = "rgba(595959aa)",
+            -- Mauve to peach
+            active_border   = { colors = {"rgb(ca9ee6)", "rgb(ef9f76)"}, angle = 45 },
+            -- Lavande
+            inactive_border = "rgb(babbf1)",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -122,12 +125,12 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 10,
+        rounding       = 4,
         rounding_power = 2,
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 1.0,
-        inactive_opacity = 1.0,
+        inactive_opacity = 0.6,
 
         shadow = {
             enabled      = true,
@@ -270,6 +273,9 @@ hl.device({
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
+-- Launcher
+hl.bind("ALT + Space", hl.dsp.exec_cmd("vicinae toggle"))
+
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
@@ -278,7 +284,6 @@ local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
@@ -364,6 +369,22 @@ hl.window_rule({
 -- })
 -- overlayLayerRule:set_enabled(false)
 
+-- Vicinae stuff
+-- blur
+hl.layer_rule({
+  match = { namespace = "vicinae" },
+  name = "vicinae-blur",
+  blur = true,
+  ignore_alpha = 0,
+})
+
+-- disable animation for vicinae only
+hl.layer_rule({
+  match = { namespace = "vicinae" },
+  name = "vicinae-no-animation",
+  no_anim = true,
+})
+
 -- Hyprland-run windowrule
 hl.window_rule({
     name  = "move-hyprland-run",
@@ -372,3 +393,4 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+

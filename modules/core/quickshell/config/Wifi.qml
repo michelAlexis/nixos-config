@@ -32,7 +32,7 @@ Item {
     Rectangle {
         id: button
 
-        implicitWidth: 100
+        implicitWidth: 25
         implicitHeight: 24
         radius: Theme.radius
         color: Theme.backgroundAlt
@@ -41,8 +41,8 @@ Item {
             anchors.centerIn: parent
 
             text: root.connectedNetwork
-                ? "󰤨  " + root.connectedNetwork.name
-                : "󰤭  Offline"
+                ? "󰤨 "
+                : "󰤭 "
 
             color: Theme.foreground
             font.pixelSize: 13

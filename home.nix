@@ -16,7 +16,7 @@ in
     ./modules/core
     ./modules/core/hyprland
     ./modules/core/quickshell
-    #./modules/core/noctalia
+    ./modules/core/vicinae
 
     ./modules/applications/1password
 

@@ -15,6 +15,7 @@ return {
       'vimdoc',
       'markdown',
       'markdown_inline',
+      'qmljs',
     })
 
     vim.api.nvim_create_autocmd('FileType', {
@@ -26,6 +27,7 @@ return {
         'svelte',
         'vim',
         'markdown',
+        'qmd',
       },
       callback = function()
         vim.treesitter.start()

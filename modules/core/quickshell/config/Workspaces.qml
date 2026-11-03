@@ -7,7 +7,7 @@ Row {
     spacing: 4
 
     Repeater {
-        model: 10
+        model: 6
 
         Rectangle {
             required property int index

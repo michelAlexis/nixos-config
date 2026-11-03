@@ -11,6 +11,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     herdr-nix.url = "github:herdrdev/herdr-nix";
+    vicinae.url = "github:vicinaehq/vicinae";
   };
   outputs = { self, nixpkgs, home-manager, ... } @inputs : {
     nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
