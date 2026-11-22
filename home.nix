@@ -18,6 +18,7 @@ in
     ./modules/core/quickshell
     ./modules/core/vicinae
     ./modules/core/zsh
+    ./modules/core/keyboard
 
     ./modules/applications/1password
 

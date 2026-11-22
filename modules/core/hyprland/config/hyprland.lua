@@ -62,6 +62,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("quickshell")
   hl.exec_cmd("vicinae server")
   hl.exec_cmd("hyprpaper")
+  hl.exec_cmd("1password --silent")
   -- hl.exec_cmd("nm-applet")
 end)
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
@@ -238,7 +239,7 @@ hl.config({
 hl.config({
     input = {
         kb_layout  = "us",
-        kb_variant = "",
+        kb_variant = "intl",
         kb_model   = "",
         kb_options = "",
         kb_rules   = "",
