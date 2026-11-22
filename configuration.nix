@@ -40,8 +40,6 @@
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
-
-
   programs.hyprland.enable = true;
   services.displayManager.ly.enable = true;
   
@@ -55,7 +53,6 @@
     "/share/applications"
     "/share/xdg-desktop-portal"
   ];
-  
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -63,7 +60,6 @@
     variant = "intl";
   };
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
-
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -79,8 +75,13 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  environment.sessionVariables = {
+    EDITOR = "nvim";
+    VISUAL = "alacritty -e nvim";
+  };
+
   programs.zsh.enable = true;
+  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ami = {
     isNormalUser = true;
     shell = pkgs.zsh;
@@ -101,7 +102,29 @@
     btop
     yazi
     spotify
-    # _1password-gui
+  ];
+
+  # Run unpackaged binaries (herdr-app, installed with its upstream script)
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc.lib
+    zlib
+    openssl
+    libxcb
+    libxkbcommon
+    wayland
+    libx11
+    libxcursor
+    libxi
+    libxrandr
+    libxext
+    libGL
+    libgbm
+    libdrm
+    vulkan-loader
+    fontconfig
+    freetype
+    alsa-lib
   ];
 
   fonts.packages = with pkgs; [

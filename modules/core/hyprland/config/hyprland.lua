@@ -58,7 +58,7 @@ local gtk3_theme = "gsettings set org.gnome.desktop.interface 'adw-gtk3'"
 hl.on("hyprland.start", function () 
   hl.exec_cmd(gtk4_theme)
   hl.exec_cmd(gtk3_theme)
-  hl.exec_cmd(terminal)
+  hl.exec_cmd("herdr-app")
   hl.exec_cmd("quickshell")
   hl.exec_cmd("vicinae server")
   hl.exec_cmd("hyprpaper")

@@ -1,5 +1,11 @@
 include "%L"
 
-# US international: '+c gives ç instead of ć
+# '+c -> ć
 <dead_acute> <c> : "ç" ccedilla
 <dead_acute> <C> : "Ç" Ccedilla
+
+# Double " => "
+<dead_diaeresis> <dead_diaeresis> : "\"" quotedbl
+
+# Double ' -> '
+<dead_acute> <dead_acute> : "'" apostrophe

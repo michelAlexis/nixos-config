@@ -1,0 +1,3 @@
+[submodule "modules/dev/herdr/app-config"]
+	path = modules/dev/herdr/app-config
+	url = git@github.com:michelAlexis/herdr-app.git
