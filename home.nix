@@ -17,6 +17,7 @@ in
     ./modules/core/hyprland
     ./modules/core/quickshell
     ./modules/core/vicinae
+    ./modules/core/zsh
 
     ./modules/applications/1password
 
