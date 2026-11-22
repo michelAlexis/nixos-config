@@ -15,3 +15,8 @@ setopt AUTO_CD INTERACTIVE_COMMENTS
 # Aliases
 alias ls='ls --color=auto'
 alias ll='ls -lah'
+alias nrs='sudo nixos-rebuild switch --flake ~/nixos-config#nixos-btw'
+alias nup='sudo nix flake update --flake ~/nixos-config'
+
+# Prompt
+eval "$(starship init zsh)"
