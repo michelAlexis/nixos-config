@@ -25,5 +25,6 @@ in
     ./modules/dev/alacritty
     ./modules/dev/opencode
     ./modules/dev/herdr
+    ./modules/dev/claude
   ];
 }

@@ -1,13 +1,13 @@
 {
   description = "Nixos the begining";
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-26.05";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     quickshell = {
-      url = "github:quickshell-mirror/quickshell?ref=v0.3.1";
+      url = "github:quickshell-mirror/quickshell?ref=v0.3.2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     herdr-nix.url = "github:herdrdev/herdr-nix";

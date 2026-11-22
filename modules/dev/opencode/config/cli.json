@@ -1,3 +1,8 @@
 {
-  "plugins": ["./herdr-opencode"]
+  "plugins": [
+    "./herdr-opencode"
+  ],
+  "theme": {
+    "name": "catppuccin-frappe"
+  }
 }

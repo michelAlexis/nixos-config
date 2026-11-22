@@ -14,4 +14,6 @@ Singleton {
     readonly property int barHeight: 32
     readonly property int spacing: 6
     readonly property int radius: 6
+    // Gap between the bottom of the bar and the popups
+    readonly property int popupGap: 6
 }

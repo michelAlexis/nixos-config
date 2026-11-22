@@ -36,12 +36,14 @@ Item {
         id: popup
 
         anchor.item: button
+        // Align popup under the bar, separated by Theme.popupGap
+        anchor.rect.y: button.height + (Theme.barHeight - button.height) / 2 + Theme.popupGap
 
         implicitWidth: 180
         implicitHeight: 190
 
         visible: false
-        color: Theme.backgroundAlt
+        color: "transparent"
         grabFocus: true
 
         Rectangle {

@@ -1,0 +1,17 @@
+# ~/.claude is symlinked straight into this directory, and Claude Code
+# writes a lot of runtime state there (transcripts, history, caches) and
+# keeps credentials in it. Track only the declarative config.
+*
+!.gitignore
+!settings.json
+!CLAUDE.md
+!agents/
+!agents/**
+!commands/
+!commands/**
+!skills/
+!skills/**
+!hooks/
+!hooks/**
+!output-styles/
+!output-styles/**
